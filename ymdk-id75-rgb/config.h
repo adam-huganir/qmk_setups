@@ -18,7 +18,6 @@
 
 #pragma once
 
-
 #define DYNAMIC_KEYMAP_LAYER_COUNT 6
 
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
@@ -30,21 +29,10 @@
 
 #define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
 
-
-
-
-
 #define RGB_MATRIX_KEYPRESSES // reacts to keypresses
 
-
-
-
-
-
-
-
-
 #ifdef RGB_MATRIX_ENABLE
+
 /* The pin connected to the data pin of the LEDs */
 #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200
 // #define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS * 3/4
