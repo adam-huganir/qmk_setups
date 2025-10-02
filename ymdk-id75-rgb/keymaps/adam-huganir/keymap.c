@@ -17,18 +17,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // default
     [0] = LAYOUT_ortho_5x15(
         QK_GESC,        KC_1,           KC_2,           KC_3,           KC_4,           KC_5,           _______,        _______,        KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINS,        KC_EQL,
-        KC_TAB,         KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,           KC_LABK,        KC_RABK,        KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        KC_LBRC,        KC_RBRC,
-        KC_CAPS,        LGUI_T(KC_A),   LALT_T(KC_R),   LCTL_T(KC_S),   LSFT_T(KC_T),   KC_G,           KC_LPRN,        KC_RPRN,        KC_M,           RSFT_T(KC_N),   RALT_T(KC_E),   RCTL_T(KC_I),   RGUI_T(KC_O),   KC_QUOT,        KC_HOME,
-        KC_LSFT,        LT(2, KC_Z),    KC_X,           KC_C,           KC_D,           KC_V,           KC_LBRC,        KC_RBRC,        KC_K,           KC_H,           KC_COMM,        KC_DOT,         LT(1, KC_SLSH), KC_UP,          KC_END,
+        KC_TAB,         KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           KC_LABK,        KC_RABK,        KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_LBRC,        KC_RBRC,
+        KC_CAPS,        LGUI_T(KC_A),   LALT_T(KC_S),   LCTL_T(KC_D),   LSFT_T(KC_F),   KC_G,           KC_LPRN,        KC_RPRN,        KC_H,           RSFT_T(KC_J),   RALT_T(KC_K),   RCTL_T(KC_L),   RGUI_T(KC_SCLN), KC_QUOT,        KC_HOME,
+        KC_LSFT,        LT(2, KC_Z),    KC_X,           KC_C,           KC_V,           KC_B,           KC_LBRC,        KC_RBRC,        KC_N,           KC_M,           KC_COMM,        KC_DOT,         LT(1, KC_SLSH), KC_UP,          KC_END,
         KC_LCTL,        KC_LGUI,        KC_LALT,        LT(3, KC_ESC),  LT(4, KC_SPC),  LT(5, KC_TAB),  KC_HOME,        KC_END,         LT(6, KC_ENT),  LT(7, KC_BSPC), LT(8, KC_DEL),  TG(2),          KC_LEFT,        KC_DOWN,        KC_RGHT
     ),
 
     // QWERTY layer
     [1] = LAYOUT_ortho_5x15(
         _______,        _______,        _______,        _______,        _______,        _______,        _______,        _______,        _______,        _______,        _______,        _______,        _______,        _______,        _______,
-        _______,        KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,           _______,        _______,        KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           _______,        _______,
-        _______,        LGUI_T(KC_A),   LALT_T(KC_S),   LCTL_T(KC_D),   LSFT_T(KC_F),   KC_G,           _______,        _______,        KC_H,           RSFT_T(KC_J),   RALT_T(KC_K),   RCTL_T(KC_L),   RGUI_T(KC_SCLN), _______,       _______,
-        _______,        LT(1, KC_Z),    KC_X,           KC_C,           KC_V,           KC_B,           _______,        _______,        KC_N,           KC_M,           KC_COMM,        KC_DOT,         LT(1, KC_SLSH), _______,        _______,
+        _______,        KC_Q,           KC_W,           KC_F,           KC_P,           KC_B,           _______,        _______,        KC_J,           KC_L,           KC_U,           KC_Y,           KC_SCLN,        _______,        _______,
+        _______,        LGUI_T(KC_A),   LALT_T(KC_R),   LCTL_T(KC_S),   LSFT_T(KC_T),   KC_G,           _______,        _______,        KC_M,           RSFT_T(KC_N),   RALT_T(KC_E),   RCTL_T(KC_I),   RGUI_T(KC_O),   _______,       _______,
+        _______,        LT(1, KC_Z),    KC_X,           KC_C,           KC_D,           KC_V,           _______,        _______,        KC_K,           KC_H,           KC_COMM,        KC_DOT,         LT(1, KC_SLSH), _______,        _______,
         _______,        _______,        _______,        KC_APP,         KC_SPC,         KC_TAB,         _______,        _______,        _______,        _______,        _______,        _______,        _______,        _______,        _______
     ),
 
