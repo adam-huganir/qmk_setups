@@ -1,0 +1,52 @@
+version: '3'
+
+vars:
+  QMK_CONEMU: C:\Programs\QMK_MSYS\conemu\ConEmu64.exe
+  QMK_BASH: C:\Programs\QMK_MSYS\usr\bin\bash.exe
+  QMK_KEYBOARD: ymdk/id75_rgb
+  QMK_KEYMAP: adam-huganir
+  QMK_PS_ENV: "[Environment]::SetEnvironmentVariable('MSYSTEM','MINGW64','Process'); [Environment]::SetEnvironmentVariable('CHERE_INVOKING','1','Process')"
+  QMK_PS_BASH: "& '{{.QMK_BASH}}' --login -c"
+
+tasks:
+  qmk_shell:
+    desc: Open QMK MSYS shell
+    platforms: [windows]
+    cmds:
+      - powershell -Command "{{.QMK_PS_ENV}}; & '{{.QMK_CONEMU}}' -NoSingle -NoUpdate -icon 'C:\Programs\QMK_MSYS\icon.ico' -title 'QMK MSYS' -run '{{.QMK_BASH}}' -l -i"
+  
+  qmk:
+    desc: Run qmk command in QMK MSYS environment
+    platforms: [windows]
+    cmds:
+      - powershell -Command "{{.QMK_PS_ENV}}; {{.QMK_PS_BASH}} {{.CLI_ARGS}}"
+    
+  build:
+    desc: Build the keyboard firmware
+    platforms: [windows]
+    cmds:
+      - powershell -Command "{{.QMK_PS_ENV}}; {{.QMK_PS_BASH}} 'qmk compile -kb {{.QMK_KEYBOARD}} -km {{.QMK_KEYMAP}}'"
+  
+  flash:
+    desc: Flash the keyboard firmware
+    platforms: [windows]
+    cmds:
+      - powershell -Command "{{.QMK_PS_ENV}}; {{.QMK_PS_BASH}} 'qmk flash -kb {{.QMK_KEYBOARD}} -km {{.QMK_KEYMAP}}'"
+  
+  clean:
+    desc: Clean build artifacts
+    platforms: [windows]
+    cmds:
+      - powershell -Command "{{.QMK_PS_ENV}}; {{.QMK_PS_BASH}} 'qmk clean -kb {{.QMK_KEYBOARD}} -km {{.QMK_KEYMAP}}'"
+  
+  setup:
+    desc: Setup QMK environment
+    platforms: [windows]
+    cmds:
+      - powershell -Command "{{.QMK_PS_ENV}}; {{.QMK_PS_BASH}} 'qmk setup'"
+  
+  doctor:
+    desc: Check QMK environment health
+    platforms: [windows]
+    cmds:
+      - powershell -Command "{{.QMK_PS_ENV}}; {{.QMK_PS_BASH}} 'qmk doctor'"
